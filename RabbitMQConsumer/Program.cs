@@ -10,5 +10,9 @@ var factory = new ConnectionFactory()
 };
 var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
-QueueConsumer.Consume(channel);
+//QueueConsumer.Consume(channel);
+//DirectExchangeConsumer.Consume(channel);
+//TopicExchangeConsumer.Consume(channel);
+//HeaderExchangeConsumer.Consume(channel);
+FanoutExchangeConsumer.Consume(channel);
 
